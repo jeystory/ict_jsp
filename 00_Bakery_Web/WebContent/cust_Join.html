@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정보</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".nav").load("menu_Main.html")
+	});
+</script> 
+<style type="text/css">
+	
+</style>
+<body>
+	<div class="header"><img src="images/banner2.png" alt="top_banner.png"></div>
+ 	
+	<div class = "main_content">
+	<form id= "f_login">
+	<h3> 회원가입 </h3>
+			<fieldset>
+					<legend>회원정보 </legend>
+			<p>이름 : <input type="text" name="name"> </p>
+		
+			<p> 아이디(E-mail)  <br>
+			 	<input type="text" name="email_id"  placeholder = "email_ID" style ="width: 200px" >@
+			 	<input type="text" name="email_com" placeholder = email.com  style ="width: 250px">
+			 	<select style = "width:150px">
+  						<option value="direct">직접입력: </option>
+    					<option value="naver">naver.com</option>
+    					<option value="gmail">gmail.com </option>
+    					<option value="daum">daum.net </option>
+  				</select> 
+  				<button type="button" onclick=""> 중복체크</button>
+			</p>
+			</fieldset>
+					
+				<fieldset>
+					<legend>비밀번호 </legend>
+					<p>비밀번호 : <input type="password"  id="pwd"></p>
+					<p>비밀번호 확인 : <input type="password"  id="pwd"></p>
+				</fieldset>	
+				
+				<fieldset>
+					<legend>연락처 </legend>
+					<p>
+						전화번호 : <input type="number" name="tel_1" placeholder="000"  style ="width: 150px" > -
+						<input type="number" name="tel_2"  placeholder="1111"  style ="width: 150px"> -
+						<input type="number" name="tel_3"   placeholder="2222"  style ="width: 150px"><br>
+						휴대전화: <input type="number" name="tel_1" placeholder="000"  style ="width: 150px" > -
+						<input type="number" name="tel_2"  placeholder="1111"  style ="width: 150px"> -
+						<input type="number" name="tel_3"   placeholder="2222"  style ="width: 150px">
+					</p>
+				</fieldset>
+			
+				
+				<fieldset>
+					<legend>주소 </legend>
+					우편번호 <input type="text"  id="inputZip" style = "width:200px"> 
+					<button type="button" onclick=""> 주소검색</button>
+					<br>
+					<input type="text" name="addr" placeholder="OO시 OO구 OOO동  OOO길 OO번지" >
+				</fieldset>	
+				
+				<p align="center"><button type="button" onclick="">가입</button><button type="button" onclick="">취소</button></p>
+				
+	</form>
+	</div>
+	<div class ="footer" >
+  		<p>Copyright 2020 SweetForest</p>
+	</div>	
+</body>
+</html>

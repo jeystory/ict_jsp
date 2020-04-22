@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;0211_MVC_Guestbook2/src/com.ict.jdbc&apos;&#x0D;&#x0A;- Original project: &apos;0210_guestbook2&apos;&#x0D;&#x0A;- Destination element: &apos;0211_MVC_Guestbook2/src/com.ict.jdbc&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.ict.edu.VO.java&#x0D;&#x0A;     com.ict.edu.DAO.java" description="Copy compilation units" destination="=0211_MVC_Guestbook2/src&lt;com.ict.jdbc" element1="/src&lt;com.ict.edu{VO.java" element2="/src&lt;com.ict.edu{DAO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581385594342" units="2" version="1.0"/>
+</session>

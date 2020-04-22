@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니 리스트</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".nav").load("menu_Main.html")
+    	$(".user_content").load("menu_User.html")
+	});
+</script> 
+
+<style type="text/css">
+
+	
+</style>
+
+
+</head>
+<body>
+	<div class="header"><img src="images/banner2.png" alt="top_banner.png"></div>
+ 	<div class= "nav"></div>
+ 		<div class ="user_content"></div> 
+	<div class = "main_content">
+	<h2>주문 배송 조회</h2>
+	<table id = "board_notice">
+		<thead>
+			<tr>
+				<th>주문일/구매번호</th>
+				<th>상품정보</th>
+				<th>상태</th>
+				<th>확인/신청</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >2020-01-15 <br> (87711984) </td>
+				<td> 에그타르트 <br> 5,800</td>
+				<td> 배송중 <br> <button type="button" onclick="">배송조회</button></td>
+				<td> <button type="button" onclick="">구매확정</button> </td>
+			</tr>
+			<tr>
+				<td >2020-01-10 <br> (87711884) </td>
+				<td> 티라미슈 <br> 16,500</td>
+				<td> 배송완료 <br> <button type="button" onclick="">배송조회</button></td>
+				<td> <button type="button" onclick="">구매후기</button> </td>
+			</tr>
+			
+			<tr>
+				<td >2020-01-10 <br> (87711884) </td>
+				<td> 블랙포레스트 <br> 26,000</td>
+				<td> 배송완료 <br> <button type="button" onclick="">배송조회</button></td>
+				<td> <button type="button" onclick="">구매후기</button> </td>
+			</tr>
+			
+		</tbody>
+		<tfoot>
+    		<tr ><td  colspan = "4">[1]</td></tr>
+  		</tfoot>
+		
+	</table>
+	
+		<h2>주문 배송 상태 안내</h2>
+		<img src="images/order_status.png" alt="order_status">
+		</div>
+
+	<div class ="footer" >
+  		<p>Copyright 2020 SweetForest</p>
+	</div>	
+	
+</body>
+</html>

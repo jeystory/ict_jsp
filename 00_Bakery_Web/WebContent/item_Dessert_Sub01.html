@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메뉴</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".nav").load("menu_Main.html");
+	$("#tab-1").load("item_Menu.html");
+	$("#tab-2").load("item_Review.html");
+	$("#tab-3").load("item_QA.html");
+});
+
+$(function(){
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+});
+</script>
+<style type="text/css">
+	*{
+		line-height: 1.6;
+		margin : 0;
+		padding : 0;
+	}
+		/* 
+	container 구성 요소
+	- tab(ul title)
+	-  tab-1~3까지의 내용의 범위
+	 */
+	.container{
+		margin: 10px;
+		width : 90%;
+	}
+
+	ul.tabs{
+		margin-left: 15px;	/* 수치 조정시.tab-content도 수정*/
+		padding: 0px;
+		list-style: none;
+		/* border : 1px solid lightcoral; */
+	}
+	
+	ul.tabs li{
+		background-color: lightcoral; 	/* 선택되지 않은 탭  */
+		color: white;
+		display: inline-block;
+		padding: 15px 10px;
+		cursor: pointer;
+	}
+
+	ul.tabs li.current{
+		background-color: #ff4c4c;
+		color: black; 
+	}
+
+	.tab-content{
+		display: none;
+		padding: 10px 15px;
+		margin-left : 15px;
+		
+	}
+
+	.tab-content.current{
+		display: inherit; 
+		border : 1px solid lightcoral;
+	}
+
+	
+
+	/*the container must be positioned relative:*/
+	.custom-select {
+  		position: relative;
+ 	 	width:200px;
+	}
+</style>
+
+
+</head>
+<body>
+	
+	<hr>
+
+		<table>
+			<tr><th colspan = "3"> 에그 타르트 </th><tr>
+			<tr>
+				<td rowspan = "3"><img width = 200px height = 200px src='images/items/menu_01.jpg' ></td>
+				<td colspan = "2">부드러운 에그필링으로 속을 채운 타르트 메뉴</td>
+			</tr>
+			
+			<tr><td colspan = 2>가격 : 5000 원</td></tr>
+			<tr>
+				<td>
+  					<div class="custom-select" style=""> 구매 개수 : 
+  						<select> 
+    						<option value="1">1개</option>
+    						<option value="2">2개</option>
+    						<option value="3">3개</option>
+   	 						<option value="4">4개</option>
+    						<option value="5">5개</option>
+    						<option value="6">6개</option>
+  						</select>
+					</div>
+  				</td>
+				<td><button type="button" onclick="">구매하기</button></td>
+			</tr>		
+		</table>
+		
+		<br><br>
+		<div class="container">
+			<ul class="tabs">
+				<li class="tab-link current" data-tab="tab-1" >메뉴 정보</li>
+				<li class="tab-link" data-tab="tab-2">구매 리뷰</li>
+				<li class="tab-link" data-tab="tab-3"> Q/A</li>
+			</ul>
+
+			<div id="tab-1" class="tab-content current"></div>
+			<div id="tab-2" class="tab-content"></div>
+			<div id="tab-3" class="tab-content"></div>
+		</div>
+
+	<div class ="footer">
+  		<p>Copyright 2020 SweetForest</p>
+	</div>	
+</body>
+</html>

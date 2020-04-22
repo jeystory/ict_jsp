@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="https://kauth.kakao.com/oauth/token" method="post">
+			<input type="hidden" name="grant_type" value="authorization_code" />
+			<input type="hidden" name="client_id" value="e362b3a93ba47f4167e8ed88a83b060a" />
+			<input type="hidden" name="redirect_uri" value="http://localhost:8090/login" />
+			<input type="hidden" name="code" value="${code}" />
+			<input type="submit"> 
+		</form>
+</body>
+</html>

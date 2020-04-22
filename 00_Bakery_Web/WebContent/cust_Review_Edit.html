@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 리뷰 게시판</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".nav").load("menu_Main.html")
+    	$(".user_content").load("menu_User.html")
+	});
+</script> 
+<style type="text/css">
+ 
+</style>
+</head>
+<body>
+	<div class="header"><img src="images/banner2.png" alt="top_banner.png"></div>
+ 	<div class= "nav"></div>
+ 		<div class ="user_content"></div> 
+	<div class = "main_content">
+	<form>
+		<fieldset>
+			<legend> 구매 리뷰 보기</legend>
+			<p> 구매리뷰 : <input type="text" name="review_title" style="width:300px; height:30px;" /> <p>
+			<p> 구매리뷰 내용 <br>
+			<textarea>"이미 작성된 리뷰가 보이거나  새로 작성될 경우 empty...</textarea>
+			</p>
+			<!-- 새로 작성되는 경우에는 등록과 취소버튼만 보이게 처리 -->
+			<p id = "new">
+				<button type="button"onclick="">등록</button>
+				<button type="button" onclick="">취소</button>
+			</p>
+			<p id = "exist">
+				<button type="button" onclick="">답변</button>
+				<button  type="button" onclick="">수정</button>
+				<button  type="button" onclick="">삭제</button>
+				<button  type="button" onclick="">취소</button> 
+			</p>
+		</fieldset>
+	</form>
+	</div>
+	<div class ="footer" >
+  		<p>Copyright 2020 SweetForest</p>
+	</div>	
+</body>
+</html>

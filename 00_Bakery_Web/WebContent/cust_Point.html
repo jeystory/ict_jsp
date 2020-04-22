@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 포인트 </title>
+
+<style type="text/css">
+	select{
+		width : 70px;
+	}
+</style>
+
+
+</head>
+<body>	
+		<table>
+		<thead>
+			<tr>
+				<th colspan = "5">포인트 내역</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan = "2">조회기간 > </td>
+				<td> 
+					<button  type="button" onclick="">1주일</button> 
+					<button  type="button" onclick="">15일</button> 
+					<button  type="button" onclick="">1개월</button> 
+					<button  type="button" onclick="">3개월</button> 
+				</td>	
+				<td rowspan = "2" > <button  type="button" onclick="">조회하기</button> </td>
+			</tr>
+			<tr>
+				<td >
+					<form>
+						<select id = "st_year"> 
+							<option value = 2016>2017</option>
+							<option value = 2017>2018</option>
+							<option value = 2018>2019</option>
+							<option value = 2020>2020</option>
+						</select> 년
+						<select id = "st_month"> 
+							<option value = 1>1</option>
+							<option value = 2>2</option>
+							<option value = 3>3</option>
+							<option value =4>4</option>
+							<option value =5>....</option>
+							<option value =12>12</option>
+						</select> 월
+						<select id = "st_day"> 
+							<option value = 1>1</option>
+							<option value =2>2</option>
+							<option value =3>3</option>
+							<option value = 4>...</option>
+							<option value = 28>28</option>
+							<option value =29>29</option>
+							<option value =30>30</option>
+						</select> 일 ~
+						<select id = "end_year"> 
+							<option value = 2016>2017</option>
+							<option value = 2017>2018</option>
+							<option value = 2018>2019</option>
+							<option value = 2020>2020</option>
+						</select> 년
+						<select id = "end_month"> 
+							<option value = 1>1</option>
+							<option value = 2>2</option>
+							<option value = 3>3</option>
+							<option value =4>4</option>
+							<option value =5>....</option>
+							<option value =12>12</option>
+						</select> 월
+						<select id = "end_day"> 
+							<option value = 1>1</option>
+							<option value =2>2</option>
+							<option value =3>3</option>
+							<option value = 4>...</option>
+							<option value = 28>28</option>
+							<option value =29>29</option>
+							<option value =30>30</option>
+						</select> 일
+					</form>
+				</td>
+			</tr>	
+		</tbody>
+		
+	</table>
+		
+		<form>
+			<select id = "p_list" style ="width : 200px"> 
+				<option value = 0>전체내역</option>
+				<option value =1>적립내역</option>
+				<option value =2>사용내역</option>		
+			</select> 
+		</form>
+		
+		<table id = "tb_plist">
+			<thead>
+				<tr>
+					<th>발생일자</th>
+					<th>유형</th>
+					<th>내용</th>
+					<th>포인트</th>
+					<th>유효기간</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td  colspan = "5"></td>
+				</tr>
+			</tfoot>
+			
+		
+		</table>
+		
+	
+	
+	
+</body>
+</html>

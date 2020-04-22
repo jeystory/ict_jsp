@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;0207_UpDown/WebContent/ex02_submit.jsp&apos; to &apos;ex02.jsp&apos;" description="Rename resource &apos;ex02_submit.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/ex02_submit.jsp" name="ex02.jsp" stamp="1581046932772" updateReferences="true"/>
+</session>

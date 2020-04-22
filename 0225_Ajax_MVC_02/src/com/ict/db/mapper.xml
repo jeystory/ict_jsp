@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ict.db.mapper">
+	<select id="list" resultType="com.ict.db.VO">
+		select * from members order by idx 
+	</select>
+	
+	<select id="idchk" parameterType="String" resultType="com.ict.db.VO">
+		select * from members where id = #{id}
+	</select>
+	
+	<insert id="insert" parameterType="com.ict.db.VO">
+		insert into members values(#{idx}, #{id}, #{pw},#{name},#{age},#{addr})
+	</insert>
+	
+	<delete id="delete" parameterType="com.ict.db.VO">
+		delete from members where idx = #{idx}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+

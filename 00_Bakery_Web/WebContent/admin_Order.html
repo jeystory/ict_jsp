@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 질문 게시판</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	/* function clickTrEvent(trObj) {
+		href.location = "admin_Order_Detail.html";
+		//alert(trObj.id);
+	}  */
+	$(function() {
+		 $("tr#order_detail1").click(function(){        //function_tr 
+			  //$(this).css("background-color","yellow"); 
+			 //alert(trObj.id);
+			 $(location).attr('href', 'admin_Order_Detail.html');
+			})
+		});
+</script>
+<style type="text/css">
+	select{ width : 200px;}
+</style>
+
+</head>
+<body>
+	<h2>주문 배송 조회</h2>
+	<table id = "board_notice">
+		<thead>
+			<tr>
+				<th>주문일/구매번호</th>
+				<th>구매자ID</th>
+				<th>상품정보</th>
+				<th>주문처리상태</th>
+				<th>환불처리상태</th>
+				<th>변경사항저장</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr id ="order_detail1" onclick="javascript:clickTrEvent(this)" >
+				<td>2020-01-15 <br> (87711984) </td>
+				<td> 구매자1 </td>
+				<td> 에그타르트 <br> 5,800</td>
+				<td> 
+					<div class="order_status" style="">
+  						<select> 
+    						<option value="1" selected>입금대기중</option>
+    						<option value="2">결제완료</option>
+    						<option value="3">상품준비중</option>
+   	 						<option value="4">배송중</option>
+    						<option value="5">배송완료</option>
+    						<option value="5">구매완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td> 
+					<div class="return_status" style="">
+  						<select> 
+    						<option value="1" selected>환불미요청</option>
+    						<option value="2">환불요청</option>
+    						<option value="3">환불처리중</option>
+   	 						<option value="4">환불처리완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td><button type="button">저장</button></td>
+			</tr>
+			<tr  class ="order_detail" >
+				<td >2020-01-10 <br> (87711884) </td>
+				<td> 구매자2</td>
+				<td> 티라미슈 <br> 16,500</td>
+				<td> 
+					<div class="order_status" style="">
+  						<select> 
+    						<option value="1" selected>입금대기중</option>
+    						<option value="2">결제완료</option>
+    						<option value="3">상품준비중</option>
+   	 						<option value="4">배송중</option>
+    						<option value="5">배송완료</option>
+    						<option value="5">구매완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td> 
+					<div class="return_status" style="">
+  						<select> 
+    						<option value="1" selected>환불미요청</option>
+    						<option value="2">환불요청</option>
+    						<option value="3">환불처리중</option>
+   	 						<option value="4">환불처리완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td><button type="button">저장</button></td>
+			</tr>
+			
+			
+			<tr class ="order_detail">
+				<td>2020-01-10 <br> (87711884) </td>
+				<td> 구매자3 </td>
+				<td> 블랙포레스트 <br> 26,000</td>
+				<td> 
+					<div class="order_status" style="">
+  						<select> 
+    						<option value="1" selected>입금대기중</option>
+    						<option value="2">결제완료</option>
+    						<option value="3">상품준비중</option>
+   	 						<option value="4">배송중</option>
+    						<option value="5">배송완료</option>
+    						<option value="5">구매완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td> 
+					<div class="return_status" style="">
+  						<select> 
+    						<option value="1" selected>환불미요청</option>
+    						<option value="2">환불요청</option>
+    						<option value="3">환불처리중</option>
+   	 						<option value="4">환불처리완료</option>
+  						</select>
+					</div> 
+				</td>
+				<td><button type="button">저장</button></td>
+			</tr>
+			
+		</tbody>
+		<tfoot>
+    		<tr ><td  colspan = "6">[1]</td></tr>
+  		</tfoot>	
+	</table>
+	
+</body>
+</html>

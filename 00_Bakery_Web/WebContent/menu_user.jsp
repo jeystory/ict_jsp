@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/sw_layout.css">
+<style type="text/css">
+	/* *{
+		font-size: 20px;
+		line-height: 1.6;
+		margin : 0;
+		padding : 0;
+	} */
+	
+	/* Style the side navigation */
+	.user_content {
+  		height: 100%;
+  		width: 200px;
+  		position: absolute;
+  		background-color: lightcoral; 				
+  		padding: 5px;
+
+	}
+
+	/* Side navigation links */
+	.user_content a {
+  		color: white;
+ 		padding: 16px;
+  		text-decoration: none;
+  		display: block;
+	}
+
+	/* Change color on hover */
+	.user_content a:hover {
+ 		background-color: #ff1a48;
+  		color: black;
+	}
+</style> 	
+</head>
+<body>
+	<div id="sidenav">
+		<a href="index_cust.jsp?ContentPg=custOrderList" >주문 배송 조회</a>	
+		<a href="index_cust.jsp?ContentPg=custPoint" >포인트 조회</a>
+  		<a href="index_cust.jsp?ContentPg=custReview">구매후기</a>
+  		<a href="index_cust.jsp?ContentPg=custQA">Q/A</a>
+  		<a href="index_cust.jsp?ContentPg=custInfo">회원정보수정</a>
+	</div>
+</body>
+</html>

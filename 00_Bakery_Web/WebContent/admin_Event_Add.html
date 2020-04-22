@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Event</title>
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet" type="text/css" href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+
+	 
+	$(function(){	 
+		$('ul.tabs li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		});
+	});
+	 
+</script> 
+
+<style type="text/css">
+	.container{
+		/* width: 500px;
+		margin: 0 auto; */
+		width : 90%;
+		margin : 10;
+	}
+
+	ul.tabs{
+		/* margin: 0px; */
+		margin-left : 15px;
+		padding: 0px;
+		list-style: none;
+	}
+	
+	ul.tabs li{
+		background: lightcoral;
+		color: white;
+		display: inline-block;
+		padding: 10px 15px;
+		cursor: pointer;
+	}
+
+	ul.tabs li.current{
+		background: #ff4c4c;
+		color: black;
+	}
+
+	.tab-content{
+		display: none;
+		/* background: lightcoral; */
+		padding: 10px 15px;/* 15px; */
+		margin-left : 15px;
+		border : 1px soild lightcoral;
+	}
+
+	.tab-content.current{
+		display: inherit;
+		border : 1px solid lightcoral;
+	}
+</style>
+</head>
+
+<body>
+
+		<div class="container">
+			<ul class="tabs">
+				<li class="tab-link current" data-tab="tab-1">이벤트 수정</li>
+				<li class="tab-link" data-tab="tab-2">이벤트 추가</li>
+			</ul>
+
+			<div id="tab-1" class="tab-content current">
+				<form>
+					<table>
+						<thead></thead>
+						<tbody></tbody>
+						<tr>
+							<td>이벤트 ID :</td>
+							<td><input type="text" name="event_id"
+								style="width: 300px; height: 30px;" /></td>
+							<td><button type="button">검색</button></td>
+						</tr>
+						<tr>
+							<td>이벤트 이름 :</td>
+							<td colspan="2"><input type="text" name="event_name"
+								style="width: 300px; height: 30px;" /></td>
+						</tr>
+						<tr>
+							<td>이벤트 기간:</td>
+							<td colspan="2"><input type="month" name="s_date"> <input
+								type="month" name="e_date"></td>
+						</tr>
+						<tr>
+							<td>이미지(main):</td>
+							<td><input type="text" name="event_smImg"
+								style="width: 300px; height: 30px;" /></td>
+							<td><button type="button">이미지 검색</button></td>
+						</tr>
+						<tr>
+							<td>이미지(detail) :</td>
+							<td><input type="text" name="event_smImg"
+								style="width: 300px; height: 30px;" /></td>
+							<td><button type="button" onclick="">이미지 검색</button></td>
+						</tr>
+						<tr>
+							<td colspan="3" align="center">
+								<button type="button" onclick="">저장</button>
+								<button type="button" onclick="">취소</button></td>
+						</tr>
+						<tfoot></tfoot>
+					</table>
+				</form>
+				
+			</div>
+			<div id="tab-2" class="tab-content"> 
+			<form>
+					<table>
+						<thead></thead>
+						<tbody></tbody>
+						<tr>
+							<td>이벤트 이름 :</td>
+							<td colspan="2"><input type="text" name="event_name"
+								style="width: 300px; height: 30px;" /></td>
+						</tr>
+						<tr>
+							<td>이벤트 기간:</td>
+							<td colspan="2"><input type="month" name="s_date"> <input
+								type="month" name="e_date"></td>
+						</tr>
+						<tr>
+							<td>이미지(main):</td>
+							<td><input type="text" name="event_smImg"
+								style="width: 300px; height: 30px;" /></td>
+							<td><button type="button">이미지 검색</button></td>
+						</tr>
+						<tr>
+							<td>이미지(detail) :</td>
+							<td><input type="text" name="event_smImg"
+								style="width: 300px; height: 30px;" /></td>
+							<td><button type="button" onclick="">이미지 검색</button></td>
+						</tr>
+						<tr>
+							<td colspan="3" align="center"><button type="button"
+									onclick="">저장</button>
+								<button type="button" onclick="">취소</button></td>
+						</tr>
+						<tfoot></tfoot>
+					</table>
+		      	</form>
+			</div>
+		</div>
+	
+</body>
+</html>

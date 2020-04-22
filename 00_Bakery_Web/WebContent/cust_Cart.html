@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 질문 게시판</title>
+<link rel = "stylesheet" href="css/cust_tb.css">
+<link rel = "stylesheet" href="css/sw_form.css">
+<link rel = "stylesheet"  href="css/sw_layout.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+     /*  function cust_order() {
+    	  location.href = "cust_Order_Work.html";
+      }   */
+    
+    /*   function clickTrEvent(trObj) {
+    	  //alert(trObj.id);
+    	  location.href = "cust_Order_Work.html";
+	} */
+	
+	 
+	$(function() {
+	 $("tr#info").click(function(){        //function_tr 
+		  //$(this).css("background-color","yellow"); 
+		 //alert(trObj.id);
+		 $(location).attr('href', 'cust_Order_Work.html');
+		})
+	});
+
+
+	
+</script> 
+<style type="text/css">
+	select{width : 100px;}
+</style>
+</head>
+<body>	
+	<hr>
+	<h2>장바구니 목록</h2>
+	<hr>
+	<table id = "cart_item">
+		<thead>
+			<tr>
+				<th>상품정보</th>
+				<th>상품수량</th>
+				<th>상태금액</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr id="info" onclick="javascript:clickTrEvent(this)"> -->
+			<tr id="info" >
+				<td> 에그타르트 </td>
+				<td> 
+				   	 구매 개수 :  
+  					<input type ="number" name = "cart_quantity1" id = "cart_quantity1" value = "1">
+				 </td>
+				 <td>5,800</td>
+			</tr>
+			<tr id="secondRow2" onclick="javascript:clickTrEvent(this)">
+				<td> 티라미슈 </td>
+				<td> 
+				   	구매 개수 :  
+  						<input type ="number" name = "cart_quantity2" id = "cart_quantity2" value="2">
+				 </td>
+				 <td>16,500</td>
+			</tr>
+			
+			<tr>
+				
+				<td> 블랙포레스트</td>
+				<td> 
+				   	구매 개수 : 
+  					<input type ="number" name = "cart_quantity3" id = "cart_quantity3" value="1">
+				 </td>
+				 <td>16,500</td>
+			</tr>
+			
+		</tbody>
+		<tfoot></tfoot>
+	</table>
+	
+	<hr>
+	<table>
+		<tr>
+			<td rowspan = "3">결재 예정 금액</td>
+			<td>상품금액 : 25,000</td>
+			<td rowspan = "3"> 27,500 </td>
+			<td rowspan = "3"><button type="button" onclick="cust_order()">구매하기</button> </td>
+		</tr>
+		<tr><td>할인금액:  0</td></tr>
+		<tr><td>배송비 : 2,500</td></tr>
+	</table>
+	
+	
+</body>
+</html>

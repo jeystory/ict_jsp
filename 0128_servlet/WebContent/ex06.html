@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성적처리</title>
+<script type="text/javascript">
+	function send_go1(f) {
+		f.action ="/0128_servlet/Ex06";
+		f.submit();
+	}
+	
+	function send_go2() {
+		document.myform.action = "/0128_servlet/Ex06";
+		document.myform.submit();
+		
+	}
+</script>
+</head>
+<body>
+	<h1>성적입력하기</h1>
+	<!-- 정보를 보낼 곳 :  /프로젝트이름/서블릿 이름  -->
+	<form action="/0128_servlet/Ex06" method = "post">
+		<fieldset>
+			<legend>성적입력하기 1</legend>
+			<p> 이름: <input type="text" name="name" placeholder = "이름입력"></p><br>
+		 	<p>국어: <input type="number" name="kor" placeholder = " 국어입력"></p><br> 
+			<p>영어: <input type="number" name="eng" placeholder = "영어입력"></p><br>
+			<p> 수학: <input type="number" name="math" placeholder = "수학입력"></p><br>
+			<p><input type="Submit" value="보내기1"><p>
+		</fieldset>
+	</form>
+	
+	<form>
+		<fieldset>
+			<legend>성적입력하기 2</legend>
+			<p> 이름: <input type="text" name="name" placeholder = "이름입력"></p><br>
+		 	<p>국어: <input type="number" name="kor" placeholder = " 국어입력"></p><br> 
+			<p>영어: <input type="number" name="eng" placeholder = "영어입력"></p><br>
+			<p> 수학: <input type="number" name="math" placeholder = "수학입력"></p><br>
+			<p><input type="button" value="보내기2" onclick="send_go1(this.form)"><p>
+		</fieldset>
+	</form>
+
+	<form name = "myform">
+		<fieldset>
+			<legend>성적입력하기 3</legend>
+			<p> 이름: <input type="text" name="name" placeholder = "이름입력"></p><br>
+		 	<p>국어: <input type="number" name="kor" placeholder = " 국어입력"></p><br> 
+			<p>영어: <input type="number" name="eng" placeholder = "영어입력"></p><br>
+			<p> 수학: <input type="number" name="math" placeholder = "수학입력"></p><br>
+			<p><input type="button" value="보내기3" onclick="send_go2()"><p>
+		</fieldset>
+	</form>
+</body>
+</html>

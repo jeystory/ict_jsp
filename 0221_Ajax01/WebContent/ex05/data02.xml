@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product name = "우유" price="950"></product>
+	<product  name = "음료수" price="1200"></product>
+	<product  name = "커피" price="1500"></product>
+	<product  name = "물" price="500">	</product>
+	
+	
+
+</products>

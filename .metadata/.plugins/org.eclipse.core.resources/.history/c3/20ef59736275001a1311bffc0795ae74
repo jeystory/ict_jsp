@@ -1,0 +1,50 @@
+package com.ict.edu;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+@WebServlet("/member")
+public class MyMember extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+    public MyMember() {
+        super();
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		PrintWriter out = response.getWriter();
+		
+		//  세션에 저장된 access_token을 가져오기
+		HttpSession session = request.getSession();
+		String access_token = (String)session.getAttribute("acess_token");
+		String token = access_token;
+		String header = "Bearer" + token;
+		String apiURL = "https://kapi.kakao.com/v2/user/me";
+		
+		Map<String, String> requestHeaders = new HashMap<String, String>();
+		requestHeaders.put("Authorization", header);
+		String reponseBody = get(apiURL, requestHeaders);
+		out.println(responseBpdy);
+		
+		
+	}
+
+}

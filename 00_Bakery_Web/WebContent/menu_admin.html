@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관리자 메뉴</title>
+
+<style type="text/css">
+		*{
+		font-size: 20px;
+		line-height: 1.6;
+		margin : 0;
+		padding : 0;
+	}
+	/* Style the side navigation */
+	.admin_content {
+  		height: 100%;
+  		width: 200px;
+  		position: absolute;
+  		background-color: lightcoral;
+  		/* margin: 5px; */
+  		padding: 5px;
+	}
+
+
+	/* Side navigation links */
+	.admin_content  a {
+  		color: white;
+ 		padding: 16px;
+  		text-decoration: none;
+  		display: block;
+	}
+
+	/* Change color on hover */
+	.admin_content  a:hover {
+ 		background-color: #ff1a48;
+  		color: black;
+	}
+	
+	/* .main_content {
+		margin-top : 20px;
+  		margin-left: 200px;
+  		padding-left: 20px;
+	} */
+</style>
+ 	
+</head>
+
+<body>
+	
+<div id="sidenav">
+		<a href="index_admin?ContentPg=adminOrder" >주문배송처리</a>
+  		<a href="index_admin?ContentPg=adminReview">구매후기</a>
+  		<a href="index_admin?ContentPg=adminQA">Q/A</a>
+  		<a href="index_admin?ContentPg=adminItem">메뉴 추가/수정</a>
+  		<a href="index_admin?ContentPg=adminEvent.html">이벤트 추가/수정</a>
+</div>
